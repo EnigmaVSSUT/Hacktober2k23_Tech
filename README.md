@@ -31,7 +31,7 @@ git clone <repo link>
 
 You have to follow four simple steps once you have forked and cloned the repository.
 * Go to the repository of your domain of interest. 
-* Make a folder of your name.
+* Make a folder of your name inside the domain folder in which you are contributing to.
 * Put all your required files inside this folder.
 * After completing one task or resolving an issue give a PR.
 * When you are giving a PR, make sure to mention the issue number that you have resolved in the commit message. 
