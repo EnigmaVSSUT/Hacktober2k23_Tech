@@ -1,0 +1,24 @@
+h1{
+    color:green;
+    font-size: 100px;
+    text-align: center;
+}
+
+.first{
+    border: 1px solid black;
+    padding: 20px;
+    size: 50px;
+}
+
+a{
+    text-decoration: none;
+    background-color:black;
+    padding: 5px;
+    color: white;
+}
+
+a .sec:hover{
+background-color: white;
+color: black;
+border: 1px solid black;
+}
