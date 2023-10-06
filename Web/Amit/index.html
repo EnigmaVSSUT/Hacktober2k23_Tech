@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eye-Catching FAQ Accordion</title>
+    <style>
+      /* Style for the FAQ container */
+      .faq-container {
+        max-width: 600px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(
+          to bottom,
+          #ff6b6b,
+          #ff0000
+        ); /* Gradient background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+      }
+
+      /* Style for each FAQ item */
+      .faq-item {
+        margin: 10px 0;
+        background-color: #fff;
+        padding: 15px;
+        border: 2px solid #69b2f7;
+        border-radius: 10px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: background-color 0.3s ease, color 0.3s ease,
+          transform 0.2s ease;
+      }
+
+      /* Style for the active (open) FAQ item */
+      .faq-item.active {
+        background-color: #69b2f7;
+        color: #fff;
+      }
+
+      /* Style for the question */
+      .faq-item h2 {
+        margin: 0;
+        font-weight: bold;
+        font-size: 18px;
+        transition: color 0.3s ease;
+      }
+
+      /* Style for the answer */
+      .answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        opacity: 0;
+      }
+
+      /* Animation for expanding the answer */
+      .faq-item.active .answer {
+        max-height: 500px;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="faq-container">
+      <div class="faq-item">
+        <h2>What is Lorem Ipsum?</h2>
+        <div class="answer">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+          odit vel maxime. Dolorum, maxime modi. Eos voluptatibus recusandae
+          dolores, pariatur assumenda, saepe magnam voluptatem eaque ab vel,
+          libero beatae nemo. Nam officia amet perferendis ab molestiae
+          recusandae, perspiciatis veniam sunt. Sit rem porro earum expedita
+          unde ea autem aut doloremque ipsa vel. Accusantium velit minima
+          repudiandae.
+        </div>
+      </div>
+      <div class="faq-item">
+        <h2>Why do we use it?</h2>
+        <div class="answer">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+          libero est id odio ab sint fuga. Sed voluptate nemo quaerat, assumenda
+          harum, quae maxime non iure eaque, quas perspiciatis distinctio ab
+          nisi tempore quisquam aliquam. Magni, accusamus quisquam. Facilis ab
+          minima repudiandae eaque quis magni omnis, sequi, voluptates illum
+          natus impedit, quo eos alias ipsam libero corrupti harum totam ipsa?
+          Dicta quisquam, eum incidunt, dolorum tempora delectus nisi numquam
+          ipsum dolores ex ipsa repellat a dolorem vitae, excepturi quam.
+          Similique.
+        </div>
+      </div>
+      <div class="faq-item">
+        <h2>Where does it come from?</h2>
+        <div class="answer">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure,
+          reiciendis provident dignissimos id eos soluta quidem temporibus,
+          voluptatem perferendis eligendi laudantium exercitationem fugiat
+          debitis, culpa aliquam quia sint inventore nulla mollitia consequuntur
+          consectetur modi ad in reprehenderit. Culpa molestiae, explicabo natus
+          commodi fuga voluptatum omnis perspiciatis dignissimos hic incidunt
+          tenetur nisi aperiam voluptates totam impedit corporis repellendus ab.
+          Cum debitis corporis itaque laboriosam dolore iure repudiandae, facere
+          sapiente iste magni earum nostrum praesentium necessitatibus facilis
+          labore voluptate adipisci incidunt repellendus vitae iusto voluptas,
+          ex eaque reiciendis excepturi. Impedit aperiam mollitia ipsa
+          perferendis ipsam. Nulla vero accusantium reiciendis, quod aperiam
+          exercitationem.
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript for the accordion functionality
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          // Toggle the "active" class to expand/collapse the answer
+          item.classList.toggle("active");
+
+          // Toggle the answer's visibility
+          const answer = item.querySelector(".answer");
+          if (answer.style.maxHeight) {
+            answer.style.maxHeight = null;
+          } else {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
